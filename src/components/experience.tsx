@@ -39,7 +39,7 @@ const experience = () => {
         <div className="max-w-4xl mx-auto">
           {experiences.map((exp, index) => (
             <div className="block max-w-4xl text-sm sm:text-base lg:text-xl p-6 text-gray-900 dark:text-white bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-950 dark:border-gray-700">
-              <div className="flex gap-x-4 items-center">
+              <div className="flex gap-x-4 items-center" key={index}>
                 {exp.icons}
                 <div className="flex flex-col">
                   <h5 className="text-2xl font-bold">{exp.title}</h5>

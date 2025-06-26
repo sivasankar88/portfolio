@@ -14,7 +14,7 @@ export default function Projects() {
       title: "Farmer Expense Management System",
       description:
         "A full-stack application that helps farmers register, log in, and manage their crops by adding incomes and expenses. The app calculates whether each crop is profitable and allows filtering of data by day, month, year, or custom date ranges.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/farmerExpenseTracker.pn",
       technologies: ["Next.js", "Express.js", "MongoDB", "JWT Authentication"],
       liveLink: "https://v0-farmer-expense-calculator.vercel.app/",
       githubLink: "https://github.com/sivasankar88",
