@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 import { CgMail } from "react-icons/cg";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoLocation } from "react-icons/io5";
-import React, { useRef, useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
 const Contact = () => {
@@ -51,13 +51,13 @@ const Contact = () => {
         "-zPOsL3UHqgoYb2Tk"
       )
       .then(
-        (result) => {
+        () => {
           Swal.fire({
             title: "Message sent successfully",
             timer: 2000,
             position: "top",
           });
-          form.current.reset();
+          if (form.current) form.current.reset();
         },
         (error) => {
           Swal.fire({
