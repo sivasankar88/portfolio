@@ -25,7 +25,7 @@ const about = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-sm sm:text-base dark:text-white lg:text-xl mx-auto">
+            className="dark:text-white lg:text-xl mx-auto">
             <p>
               I am a passionate Full-Stack Developer currently working at TCS
               with over 1 year of experience in building and maintaining web

@@ -48,12 +48,12 @@ const hero = () => {
             transition={{ duration: 0.5, delay: 0.6 }}
             className="mt-8 flex justify-center space-x-4">
             <button className="rounded-full border-1 p-2 text-gray-700  dark:text-gray-300  transition-colors cursor-pointer">
-              <a href="https://github.com" target="_blank">
+              <a href="https://github.com/sivasankar88" target="_blank">
                 <LuGithub className="h-8 w-8" />
               </a>
             </button>
             <button className="rounded-full border-1 p-2 text-gray-700  dark:text-gray-300 transition-colors cursor-pointer">
-              <a href="https://linkedin.com" target="_blank">
+              <a href="https://www.linkedin.com/in/sivasanka/" target="_blank">
                 <TiSocialLinkedin className="h-8 w-8" />
               </a>
             </button>

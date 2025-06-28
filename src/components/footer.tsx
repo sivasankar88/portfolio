@@ -16,10 +16,10 @@ const footer = () => {
             </p>
           </div>
           <div className="flex gap-x-6">
-            <a href="" target="_blank">
+            <a href="https://github.com/sivasankar88" target="_blank">
               <LuGithub className="h-8 w-8" />
             </a>
-            <a href="" target="_blank">
+            <a href="https://www.linkedin.com/in/sivasanka/" target="_blank">
               <TiSocialLinkedin className="h-8 w-8" />
             </a>
             <a href="mailto:sivasankar8383@gmail.com">

@@ -12,10 +12,11 @@ const skills = () => {
         "Angular",
         "React",
         "Next.js",
-        "HTML5",
-        "CSS3",
         "JavaScript",
         "TypeScript",
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS",
         "Responsive Design",
       ],
     },
@@ -30,10 +31,6 @@ const skills = () => {
       ],
     },
     {
-      category: "Databases",
-      skills: ["MongoDB", "MySQL", "PostgreSQL"],
-    },
-    {
       category: "DevOps & Tools",
       skills: [
         "Git",
@@ -43,6 +40,11 @@ const skills = () => {
         "Docker (Learning)",
       ],
     },
+    {
+      category: "Databases",
+      skills: ["MongoDB", "MySQL"],
+    },
+
     {
       category: "Other",
       skills: [

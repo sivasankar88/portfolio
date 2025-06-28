@@ -14,7 +14,7 @@ export default function Projects() {
       title: "Farmer Expense Management System",
       description:
         "A full-stack application that helps farmers register, log in, and manage their crops by adding incomes and expenses. The app calculates whether each crop is profitable and allows filtering of data by day, month, year, or custom date ranges.",
-      image: "/farmerExpenseTracker.pn",
+      image: "/farmerExpenseTrackerImage.png",
       technologies: ["Next.js", "Express.js", "MongoDB", "JWT Authentication"],
       liveLink: "https://v0-farmer-expense-calculator.vercel.app/",
       githubLink: "https://github.com/sivasankar88",
@@ -49,8 +49,14 @@ export default function Projects() {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}>
-              <div className="relative h-60 w-full">
-                <img src={project.image} alt={project.title} />
+              <div className="relative h-60 w-full flex justify-center shadow-sm">
+                <a href={project.liveLink} target="_blank">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="h-full"
+                  />
+                </a>
               </div>
 
               <div className="p-6">
