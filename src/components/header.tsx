@@ -15,29 +15,24 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
+    const stored = localStorage.getItem("theme");
     const prefersDark = window.matchMedia(
       "(prefers-color-scheme: dark)"
     ).matches;
-
-    const initialTheme = storedTheme || (prefersDark ? "dark" : "light");
-    setTheme(initialTheme);
+    const defaultTheme = stored || (prefersDark ? "dark" : "light");
+    setTheme(defaultTheme);
   }, []);
+
   useEffect(() => {
-    const html = document.documentElement;
-    console.log(html.classList);
-    if (theme === "dark") {
-      html.classList.add("dark");
-    } else {
-      html.classList.remove("dark");
-    }
+    document.documentElement.classList.toggle("dark", theme === "dark");
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
+  // const toggleTheme = () => {
+  //   setTheme(theme === "dark" ? "light" : "dark");
+  // };
 
   const navLinks = [
     { name: "About", href: "#about" },
@@ -70,7 +65,7 @@ const Header = () => {
               </a>
             ))}
             <button
-              onClick={toggleTheme}
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="ml-2 text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500 transition-colors cursor-pointer">
               {theme === "dark" ? (
                 <Sun className="h-5 w-5" />
@@ -82,7 +77,7 @@ const Header = () => {
 
           <div className="flex md:hidden items-center gap-x-5">
             <button
-              onClick={toggleTheme}
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="ml-2 font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500 transition-colors cursor-pointer">
               {theme === "dark" ? (
                 <Sun className="h-5 w-5" />

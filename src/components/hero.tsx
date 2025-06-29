@@ -24,8 +24,8 @@ const hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}>
             <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-              Building modern web applications with Angular, Spring Boot,
-              Express.js, and MongoDB
+              Building modern web applications with Angular, Next JS,
+              Express.js, Spring Boot and MongoDB
             </p>
           </motion.div>
 
