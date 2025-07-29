@@ -19,6 +19,15 @@ export default function Projects() {
       liveLink: "https://v0-farmer-expense-calculator.vercel.app/",
       githubLink: "https://github.com/sivasankar88",
     },
+    {
+      title: "Rapid Mock CLI",
+      description:
+        "A Node.js CLI tool that allows developers to rapidly create and run mock REST APIs using simple JSON files. Designed to improve frontend-backend decoupling and quick prototyping. Future enhancement includes MongoDB integration and user authentication.",
+      image: "/rapidMock.png",
+      technologies: ["Node.js", "File System", "NPM", "inquirer", "faker"],
+      liveLink: "https://www.npmjs.com/package/rapid-mock-cli",
+      githubLink: "https://github.com/sivasankar88/rapid-mock",
+    },
   ];
 
   return (
@@ -42,14 +51,14 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        <div className="flex gap-8">
+        <div className="flex-row gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}>
-              <div className="relative h-60 w-full flex justify-center shadow-sm">
+              <div className="relative h-60 mt-5 w-full flex justify-center shadow-sm">
                 <a href={project.liveLink} target="_blank">
                   <img
                     src={project.image}
