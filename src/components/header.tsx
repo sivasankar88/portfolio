@@ -44,6 +44,7 @@ const Header = () => {
     { name: "Projects", href: "#projects" },
     { name: "Skills", href: "#skills" },
     { name: "Contact", href: "#contact" },
+    { name: "Resume", href: "/Siva_Resume.pdf", target: "_blanc" },
   ];
   return (
     <header
@@ -64,6 +65,8 @@ const Header = () => {
               <a
                 key={link.name}
                 href={link.href}
+                target={link.target || "_self"}
+                rel={link.target ? "noopener noreferrer" : undefined}
                 className="text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500 transition-colors cursor-pointer">
                 {link.name}
               </a>
@@ -107,6 +110,8 @@ const Header = () => {
                 <a
                   key={link.name}
                   href={link.href}
+                  target={link.target || "_self"}
+                  rel={link.target ? "noopener noreferrer" : undefined}
                   className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800"
                   onClick={() => setIsMenuOpen(false)}>
                   {link.name}
